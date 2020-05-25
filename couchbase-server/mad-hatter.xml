@@ -5,6 +5,7 @@
   <remote name="couchbasedeps" fetch="git://github.com/couchbasedeps/" review="review.couchbase.org"/>
   <remote name="couchbaselabs" fetch="git://github.com/couchbaselabs/" review="review.couchbase.org"/>
   <remote name="blevesearch" fetch="git://github.com/blevesearch/"/>
+  <remote name="matt" fetch="ssh://git@github.com/mattcarabine/"/>
 
   <default remote="couchbase" revision="master"/>
 
@@ -34,7 +35,8 @@
   <!-- libcouchbase is tag 2.10.6 + one build-script change for MB-37768 -->
   <project name="libcouchbase" revision="a77874d1379bd1896b8a507b9d70420fa918a5f8" groups="notdefault,enterprise"/>
   <project name="magma" revision="c8e91e0af8b46d0a0e026d23ebbfab4048f670b6" groups="notdefault,enterprise,kv_ee" remote="couchbase-priv"/>
-  <project name="ns_server" revision="mad-hatter"/>
+  <project name="ns_server" remote="matt" revision="matt-branc"/>
+  <project name="health-check" remote="matt" revision="master" path="goproj/src/github.com/mattcarabine/health-check"/>
   <project name="phosphor" groups="kv" revision="53ca1eeae7bd3deea5b7bf48b3d4188b47e530d1"/>
   <project name="platform" groups="kv" revision="mad-hatter"/>
   <project name="product-texts" groups="kv" revision="74c19969e8ef1b5309077a03885d00e273378f6c"/>
@@ -44,7 +46,7 @@
   <project name="sigar" groups="kv" revision="mad-hatter"/>
   <project name="subjson" groups="kv" revision="ae63ab4b653870e400855f8563da40dda49f0eb3"/>
   <project name="testrunner" revision="mad-hatter"/>
-  <project name="tlm" revision="mad-hatter" groups="kv">
+  <project name="tlm" remote="matt" revision="mad-hatter" groups="kv">
     <copyfile src="GNUmakefile" dest="GNUmakefile"/>
     <copyfile src="Makefile" dest="Makefile"/>
     <copyfile src="CMakeLists.txt" dest="CMakeLists.txt"/>
